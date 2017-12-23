@@ -13,29 +13,29 @@ class Utils {
      * @param string $message
      * @return string
      */
-    public static function translateColors($message): string {
-        $message = str_replace("{BLACK}", TextFormat::BLACK, $message);
-        $message = str_replace("{DARK_BLUE}", TextFormat::DARK_BLUE, $message);
-        $message = str_replace("{DARK_GREEN}", TextFormat::DARK_GREEN, $message);
-        $message = str_replace("{DARK_AQUA}", TextFormat::DARK_AQUA, $message);
-        $message = str_replace("{DARK_RED}", TextFormat::DARK_RED, $message);
-        $message = str_replace("{DARK_PURPLE}", TextFormat::DARK_PURPLE, $message);
-        $message = str_replace("{ORANGE}", TextFormat::GOLD, $message);
-        $message = str_replace("{GRAY}", TextFormat::GRAY, $message);
-        $message = str_replace("{DARK_GRAY}", TextFormat::DARK_GRAY, $message);
-        $message = str_replace("{BLUE}", TextFormat::BLUE, $message);
-        $message = str_replace("{GREEN}", TextFormat::GREEN, $message);
-        $message = str_replace("{AQUA}", TextFormat::AQUA, $message);
-        $message = str_replace("{RED}", TextFormat::RED, $message);
-        $message = str_replace("{LIGHT_PURPLE}", TextFormat::LIGHT_PURPLE, $message);
-        $message = str_replace("{YELLOW}", TextFormat::YELLOW, $message);
-        $message = str_replace("{WHITE}", TextFormat::WHITE, $message);
-        $message = str_replace("{OBFUSCATED}", TextFormat::OBFUSCATED, $message);
-        $message = str_replace("{BOLD}", TextFormat::BOLD, $message);
-        $message = str_replace("{STRIKETHROUGH}", TextFormat::STRIKETHROUGH, $message);
-        $message = str_replace("{UNDERLINE}", TextFormat::UNDERLINE, $message);
-        $message = str_replace("{ITALIC}", TextFormat::ITALIC, $message);
-        $message = str_replace("{RESET}", TextFormat::RESET, $message);
+    public static function translateColors(string $message): string {
+        $message = str_replace("&0", TextFormat::BLACK, $message);
+        $message = str_replace("&1", TextFormat::DARK_BLUE, $message);
+        $message = str_replace("&2", TextFormat::DARK_GREEN, $message);
+        $message = str_replace("&3", TextFormat::DARK_AQUA, $message);
+        $message = str_replace("&4", TextFormat::DARK_RED, $message);
+        $message = str_replace("&5", TextFormat::DARK_PURPLE, $message);
+        $message = str_replace("&6", TextFormat::GOLD, $message);
+        $message = str_replace("&7", TextFormat::GRAY, $message);
+        $message = str_replace("&8", TextFormat::DARK_GRAY, $message);
+        $message = str_replace("&9", TextFormat::BLUE, $message);
+        $message = str_replace("&a", TextFormat::GREEN, $message);
+        $message = str_replace("&b", TextFormat::AQUA, $message);
+        $message = str_replace("&c", TextFormat::RED, $message);
+        $message = str_replace("&d", TextFormat::LIGHT_PURPLE, $message);
+        $message = str_replace("&e", TextFormat::YELLOW, $message);
+        $message = str_replace("&f", TextFormat::WHITE, $message);
+        $message = str_replace("&k", TextFormat::OBFUSCATED, $message);
+        $message = str_replace("&l", TextFormat::BOLD, $message);
+        $message = str_replace("&m", TextFormat::STRIKETHROUGH, $message);
+        $message = str_replace("&n", TextFormat::UNDERLINE, $message);
+        $message = str_replace("&o", TextFormat::ITALIC, $message);
+        $message = str_replace("&r", TextFormat::RESET, $message);
         return $message;
     }
     
