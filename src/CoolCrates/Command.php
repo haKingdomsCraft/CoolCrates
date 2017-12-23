@@ -34,7 +34,7 @@ class Command extends PMCommand {
         $config->save();
     }
     
-    public function execute(CommandSender $sender, $commandLabel, array $args) {
+    public function execute(CommandSender $sender, string $commandLabel, array $args) {
         if(isset($args[0])) {
             switch($args[0]) {
                 case "keys":
@@ -65,14 +65,14 @@ class Command extends PMCommand {
                     for($i = 1; $i < 4; $i++) {
                         if(!is_numeric($args[$i])) {
                             $sender->sendMessage(TextFormat::RED . "{$args[$i]} is not a valid coordinate!");
-                            return;
+                            return true;
                         }
                         $args[$i] = (int) $args[$i];
                     }
                     $crate = $this->loader->getCrateManager()->getCrate($args[4]);
                     if($crate == null) {
                         $sender->sendMessage(TextFormat::RED . "{$args[4]} is not a valid crate identifier");
-                        return;
+                        return true;
                     }
                     if(isset($args[5])) {
                         $level = $this->loader->getServer()->getLevelByName($args[5]);
